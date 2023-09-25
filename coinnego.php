@@ -8,6 +8,8 @@
 
 
 
+
+
 <div> 
  
 
@@ -18,6 +20,9 @@ $con = new mysqli("127.0.0.1","root","","sklep");
 $par="3";
 $mar='o%';
 $q="SELECT * FROM samochody WHERE id>". $par." AND marka like '$mar'"; 
+
+//$wt='T%';
+//$q="SELECT * FROM samochody where id>$par && marka like '" . $wt . "';";;
 
 
 
