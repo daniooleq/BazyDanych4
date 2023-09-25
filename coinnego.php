@@ -15,8 +15,9 @@
 
 <?php
 $con = new mysqli("127.0.0.1","root","","sklep");
-$par="5";
-$q="SELECT * FROM samochody WHERE id>".$par;
+$par="3";
+$mar='o%';
+$q="SELECT * FROM samochody WHERE id>". $par." AND marka like '$mar'"; 
 
 
 
