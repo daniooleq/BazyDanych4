@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="kolorki.css">
+</head>
+<body>
+    <form method="get" action="jakos.php">
+        <label for="userName">Nazwa użytkownika</label>
+        <input type="text" name="userName" id="username"><br>
+        <label for="userPassword">Hasło</label>
+        <input type="password" name="userPassword" id="userPassword"><br>
+        <label for="userPassword">Powtórz Hasło</label>
+        <input type="password" name="retypePassword" id="retypePassword"><br>
+        <p>Płeć:</p>
+        <label for="Male">Mężczyzna</label>
+        <input type="radio" name="userGender" id="Male" value="Male">
+        <label for="Female">Kobieta</label>
+        <input type="radio" name="userGender" id="Female" value="Female">
+        <p>Zainteresowania:</p>
+        <label for="sport">Sport</label>
+        <input type="checkbox" name="interest1" id="sport" value="sport">
+        <label for="music">Muzyka</label>
+        <input type="checkbox" name="interest2" id="music" value="music">
+        <label for="history">Historia</label>
+        <input type="checkbox" name="interest3" id="history" value="history">
+        <p>Zainteresowania 2:</p>
+        <label for="math">Matematyka</label>
+        <input type="checkbox" name="interestTwo1" id="math" value="math">
+        <label for="geography">Geografia</label>
+        <input type="checkbox" name="interestTwo2" id="geography" value="geography">
+        <label for="painting">Malarstwo</label>
+        <input type="checkbox" name="interestTwo3" id="painting" value="painting">
+        <p>Przeczytałem i akcpetuje warunki użytkowania strony.</p>
+        <label for="tos">Nie</label>
+        <input type="radio" name="tos" id="tosNo" value="tosNo" checked>
+        <label for="tos">Tak</label>
+        <input type="radio" name="tos" id="tosYes" value="tosNo">
+        <button type="Submit">Zarejestruj</button>
+    </form>
+
+</body>
+</html>
