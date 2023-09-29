@@ -77,11 +77,11 @@ echo "<br>";
 $f=$_GET["tos"];
 if ($f=="tosNo")
     {
-        echo 'Warunki zaakceptowane';
+        echo 'Warunki niezaakceptowane';
     }
     elseif($f=="tosYes")
     {
-        echo 'Warunki nie zaakceptowane';
+        echo 'Warunki zaakceptowane';
     }
     echo "<br>";
 
@@ -91,7 +91,7 @@ if ($f=="tosNo")
 
 
 $con = new mysqli("127.0.0.1","root","","daniel");
-$q="INSERT INTO `formularz` (`lp`, `nazwa`, `cena`, `opis`) VALUES ('".rand(1,200)."', '".$a."', '".rand(1,100)."', '".$b."')";
+$q="INSERT INTO `formularz` (`lp`, `nazwa`, `haslo`, `opis`) VALUES ('".rand(1,200)."', '".$a."', '".$b."', '".$c.','.$d1.','.$d2.','.$d3.','.$e1.','.$e2.','.$e3.','.$f."')";
 $wynik=$con->query($q);
 
 
