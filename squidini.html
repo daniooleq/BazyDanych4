@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Example</title>
+</head>
+<body>
+    <canvas id="mojeCanvas" width="400" height="300"></canvas>
+
+    <script>
+
+        // JavaScript code to work with the canvas will go here
+        var canvas = document.getElementById('mojeCanvas');
+        var ctx = canvas.getContext('2d');
+
+        // You can start drawing or manipulating the canvas here // skopiowalem z neta szkielet do canvas.
+
+
+
+
+
+        
+        // zmiana koloru rounRect.
+        ctx.strokeStyle = "rgb(0, 0, 0)";
+        ctx.fillStyle = "rgb(65,105,225)";
+
+        // funkcja ronudrect zeby lepiej sie robilo zaokraglone kwadraty.. 
+        function roundRect(x, y, width, height, radius) { //radius means curve of corners
+            ctx.beginPath();
+            ctx.moveTo(x + radius, y);
+            ctx.lineTo(x + width - radius, y);
+            ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+            ctx.lineTo(x + width, y + height - radius);
+            ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+            ctx.lineTo(x + radius, y + height);
+            ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+            ctx.lineTo(x, y + radius);
+            ctx.quadraticCurveTo(x, y, x + radius, y);
+            ctx.stroke();
+            ctx.fill();
+        }
+
+//command to make rounded kwadrat ;p (1wszy drin) 
+//----------------------------------------------------------------      
+        roundRect(100, 50, 150, 100, 50); //mózg
+
+//   --------------------------------------------------
+//
+        ctx.beginPath();
+        ctx.rect(150, 150, 55, 50);
+        ctx.stroke();
+        ctx.fillStyle = "rgb(65,105,225)";
+        ctx.fill();
+
+//dodalem tylko jego buzke 
+//(2 drineczek i duzo wiedzy wiecej -  godzina 22:41 - (ide na fajke))
+// ----------------------------------------------------
+//23:19 wrocilem
+//23:23 polalem kolejnego drina i michalek do mnie wypisuje <3
+
+
+
+roundRect(165,150,20,29,12);
+        ctx.strokeStyle = "rgb(0, 0, 0)";
+        ctx.fillStyle = "rgb(205,92,92)";
+        ctx.stroke();
+        ctx.fill();
+
+        //Oczka
+roundRect(184,150,20,23,12);
+        ctx.strokeStyle = "rgb(0, 0, 0)";
+        ctx.fillStyle = "rgb(205,92,92)";
+        ctx.stroke();
+        ctx.fill();
+//teraz zrenice - tez kwadratami bo latwiej
+roundRect(174,150,5,16,2)
+        ctx.strokeStyle = "rgb(0, 0, 0)";
+        ctx.fillStyle = "rgb(0,0,0)";
+        ctx.stroke();
+        ctx.fill();
+ roundRect(193,150,5,14,2)
+        ctx.strokeStyle = "rgb(0, 0, 0)";
+        ctx.fillStyle = "rgb(0,0,0)";
+        ctx.stroke();
+        ctx.fill();
+//powieki - kolor i tak juz jest ;p - 23:52 
+        ctx.beginPath();
+ctx.moveTo(165,152)
+ctx.bezierCurveTo(165,135,/**/185,115,/**/187,150);
+/*mala pomoc powiedziala mi tak:
+a. (165, 150) - The first control point. This influences the shape of the curve.
+b. (200, 10) - The second control point. This also affects the shape of the curve.
+c. (190, 165) - The endpoint of the curve */
+// kurla tyle czasu i udalo sie w koncu to skumac XD - 00:15
+ctx.stroke();
+
+//Druga powieka ... w minutke skonczona essa XD
+ctx.beginPath();
+ctx.moveTo(185,152)
+ctx.bezierCurveTo(185,135,/**/205,115,/**/209,150);
+ctx.stroke();
+
+
+
+//podkreslenie powieki przy oczkach x2
+ctx.beginPath();
+ctx.moveTo(165,150)
+ctx.lineTo(209,150)
+ctx.stroke();
+//
+ctx.beginPath();
+ctx.moveTo(165,150)
+ctx.lineTo(209,150)
+ctx.stroke();
+
+//zmarszczki i inne krzywe linie 
+
+//srodkowa zmarszczka
+ctx.beginPath();
+ctx.moveTo(145, 95);
+ctx.bezierCurveTo(145, 95, 165, 65, 230, 95);
+ctx.stroke(); 
+//1x-2x
+ctx.beginPath();
+ctx.moveTo(145, 95);
+ctx.bezierCurveTo(145, 95, 165, 65, 230, 95);
+ctx.stroke(); 
+//podwojnie zeby grubsza linia byla bo juz nie chce mi sie kminic
+
+//gorna zmarszczka (mamuska przyszla pogadac co ja tyle siedze przed kompem xD) (4 drineczek sie leje)
+ctx.beginPath();
+ctx.moveTo(165,70)
+ctx.lineTo(205,70)
+ctx.stroke();
+
+//dolna zmarszczka musi byc "curvy"
+ctx.beginPath();
+ctx.moveTo(175,100)
+ctx.bezierCurveTo(175, 104, 185, 104, 202, 101);
+ctx.stroke(); 
+
+//kropeczki na czole -- 00:44 tiger wylal mi sie na klawiature pozdro XD
+//nad brwia lewa
+roundRect(168,60,2,2,1);
+        ctx.fillStyle = "rgb(0,0,0)";
+        ctx.stroke();
+        ctx.fill();
+//nad brwia prawa
+        roundRect(194,60,2,2,1);
+        ctx.fillStyle = "rgb(0,0,0)";
+        ctx.stroke();
+        ctx.fill();
+//bardziej prawa
+        roundRect(218,59,2,2,1);
+        ctx.fillStyle = "rgb(0,0,0)";
+        ctx.stroke();
+        ctx.fill();
+//wys brwi prawo
+        roundRect(213,70,2,2,1);
+        ctx.stroke();
+        ctx.fill();
+// jeszcze prawo
+        roundRect(232,73,2,2,1);
+        ctx.stroke();
+        ctx.fill();
+//wys brwi lewo x1
+roundRect(150,70,2,2,1);
+        ctx.stroke();
+        ctx.fill();
+//x2
+roundRect(132,70,2,2,1);
+        ctx.stroke();
+        ctx.fill();
+//godzina 00:59 mam dosc.. pierdolone zadania czas na fajke, 01:03 pisze z michalkiem i szwagierka ide na faje pozdro lysy <3 
+//01:13 przerabalem gdzies jednorazowe mam dosc...
+
+//robie buzke mu teraz
+//troche z oczkami sie posralem ale jest git (zagubilem sie lekko w kodzie XD)
+
+ctx.strokeStyle = "rgb(65,105,225)";
+ctx.beginPath();
+ctx.roundRect(130, 180, 100, 22,[90,90,20,60]);
+ctx.stroke();
+ctx.fillStyle = "rgb(65,105,225)";
+ctx.fill();
+
+//nosek
+ctx.strokeStyle = "rgb(0,0,0)";
+ctx.beginPath();
+ctx.moveTo(185,173)
+ctx.bezierCurveTo(200,280,/**/222,250,/**/202,173);
+ctx.stroke();
+ctx.fillStyle = "rgb(65,105,225)";
+ctx.fill();
+//godzina 01:41 teraz usta
+
+//usta lewa strona od nosa
+ctx.beginPath();
+ctx.moveTo(143,193)
+ctx.bezierCurveTo(155, 188, 195,193, 185, 193);
+ctx.stroke(); 
+
+//usta prawa od nosa
+
+ctx.beginPath();
+ctx.moveTo(208,194)
+ctx.bezierCurveTo(217, 194, 204,194, 226, 193);
+ctx.stroke(); 
+
+//01:50 mam dosc coraz bardziej
+
+//szyja jak drucior z kwadratu zaokrąglonego kocham te funkcje <3 
+
+roundRect(168,202,12,89,2);
+        ctx.strokeStyle = "rgb(0, 0, 0)";
+        ctx.fillStyle = "rgb(65,105,225)";
+        ctx.stroke();
+        ctx.fill();
+
+//klata
+roundRect(148,262,57,29,8);
+        ctx.strokeStyle = "rgb(0, 0, 0)";
+        ctx.fillStyle = "rgb(160,82,45)";
+        ctx.stroke();
+        ctx.fill();
+
+
+
+
+        
+//szlug w buzi
+ctx.fillStyle = "brown"; // kolorek szlugensa
+ctx.beginPath();
+ctx.strokeStyle = "rgb(0, 0, 0)";
+ctx.moveTo(155, 202); // 2 punkt
+ctx.lineTo(140, 232); // 3 punkt
+ctx.lineTo(127, 225); // 4 punkt
+ctx.lineTo(145, 202); //1 punkt
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+//02:10 zaraz zasne xd
+
+//kolejne "curvy" lines jako dym ze szluga.. 
+ctx.beginPath();
+ctx.moveTo(125,210)
+ctx.bezierCurveTo(105, 200, 136, 185, 118, 179);
+ctx.stroke(); 
+
+ctx.beginPath();
+ctx.moveTo(113,206)
+ctx.bezierCurveTo(95, 204, 133, 175, 105, 176);
+ctx.stroke(); 
+
+//02:22 zaraz sie porycze zmeczony jestem XDXD
+//jeszcze blancior, kolnierzyk i serduszko zajebane.. boze jesszcze włosy XD jaki chuj mi to namalowal
+
+//kolnierzyk = 3 trojkaty????? //jednak kwadraty 
+//pierwszy to kolnierzyk z kwadratu
+ctx.strokeStyle = "rgb(0, 0, 0)";
+ctx.fillStyle = "rgb(160,82,45)"; 
+ctx.beginPath();
+ctx.moveTo(168, 248); 
+ctx.lineTo(175, 259); // tu
+ctx.lineTo(172, 272);
+ctx.lineTo(160, 259); 
+ctx.closePath();
+ctx.fill(); 
+ctx.stroke();
+//kolejna czesc kolnierza
+ctx.strokeStyle = "rgb(0, 0, 0)";
+ctx.fillStyle = "rgb(160,82,45)"; 
+ctx.beginPath();
+ctx.moveTo(175, 259); 
+ctx.lineTo(180, 249);
+ctx.lineTo(179, 278);
+ctx.lineTo(175, 259); 
+ctx.closePath();
+ctx.fill(); 
+ctx.stroke();
+//ostatni kolnierz godzina 02:39
+ctx.strokeStyle = "rgb(0, 0, 0)";
+ctx.fillStyle = "rgb(160,82,45)"; 
+ctx.beginPath();
+ctx.moveTo(180, 249); 
+ctx.lineTo(185, 272);
+ctx.lineTo(189, 273);
+ctx.lineTo(180, 266);
+ctx.closePath();
+ctx.fill(); 
+ctx.stroke();
+
+//wlosy i blanciioooor jeszcze 
+//wlosy
+ctx.beginPath();
+ctx.moveTo(170, 50); //(x, y)
+ctx.lineTo(172, 35); //(x, y)
+ctx.strokeStyle = "black"; //kolorek
+ctx.stroke(); 
+
+ctx.beginPath();
+ctx.moveTo(169, 50); //(x, y)
+ctx.lineTo(164, 42); //(x, y)
+ctx.strokeStyle = "black"; //kolorek
+ctx.stroke(); 
+
+ctx.beginPath();
+ctx.moveTo(155, 50); //(x, y)
+ctx.lineTo(151, 42); //(x, y)
+ctx.strokeStyle = "black"; //kolorek
+ctx.stroke(); 
+
+ctx.beginPath();
+ctx.moveTo(155, 50); //(x, y)
+ctx.lineTo(157, 40); //(x, y)
+ctx.strokeStyle = "black"; //kolorek
+ctx.stroke(); 
+
+ctx.beginPath();
+ctx.moveTo(134, 51); //(x, y)
+ctx.lineTo(137, 45); //(x, y)
+ctx.strokeStyle = "black"; //kolorek
+ctx.stroke(); 
+
+ctx.beginPath();
+ctx.moveTo(134, 51); //(x, y)
+ctx.lineTo(132,45); //(x, y)
+ctx.strokeStyle = "black"; //kolorek
+ctx.stroke(); 
+
+ctx.beginPath();
+ctx.moveTo(185, 50); //(x, y)
+ctx.lineTo(189, 42); //(x, y)
+ctx.strokeStyle = "black"; //kolorek
+ctx.stroke(); 
+
+ctx.beginPath();
+ctx.moveTo(195, 50); //(x, y)
+ctx.lineTo(200, 38); //(x, y)
+ctx.strokeStyle = "black"; //kolorek
+ctx.stroke(); 
+
+ctx.beginPath();
+ctx.moveTo(205, 50); //(x, y)
+ctx.lineTo(206, 43); //(x, y)
+ctx.strokeStyle = "black"; //kolorek
+ctx.stroke(); 
+
+ctx.beginPath();
+ctx.moveTo(218, 52); //(x, y)
+ctx.lineTo(220, 45); //(x, y)
+ctx.strokeStyle = "black"; //kolorek
+ctx.stroke(); 
+
+ctx.beginPath();
+ctx.moveTo(220, 53); //(x, y)
+ctx.lineTo(225, 46); //(x, y)
+ctx.strokeStyle = "black"; //kolorek
+ctx.stroke(); 
+
+ctx.beginPath();
+ctx.moveTo(233, 58); //(x, y)
+ctx.lineTo(243, 42); //(x, y)
+ctx.strokeStyle = "black"; //kolorek
+ctx.stroke(); 
+//godzina 03:03 zdycham powaznie xD 7:45 lekcje zajebisciee!
+//blancior i serce i koniec czyli z 3h// ide na przerwe xD
+//03:14 zjadlem kanapeczke i znalazlem swoja jednorazkowke jest gituwa
+
+// blancior ;
+ctx.fillStyle = "rgb(152,251,152)"; // kolorek blanciora
+
+ctx.beginPath();
+ctx.strokeStyle = "rgb(0, 0, 0)";
+ctx.lineWidth = 5;
+ctx.moveTo(320, 212); // 1 punkt
+ctx.lineTo(332, 217); // 2 punkt
+ctx.lineTo(300, 250); // 3 punkt
+ctx.lineTo(297, 250); //4 punkt
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+
+ctx.strokeStyle = "rgb(152,251,152)";
+ctx.beginPath();
+ctx.lineWidth = 2;
+ctx.moveTo(326, 212)
+ctx.bezierCurveTo(326,162, 330, 196, 329, 149);
+ctx.stroke(); 
+
+ctx.strokeStyle = "rgb(220,20,60)";
+
+ctx.beginPath();
+ctx.lineWidth = 2;
+ctx.moveTo(326, 212)
+ctx.bezierCurveTo(321,162, 331, 196, 321, 149);
+ctx.stroke(); 
+
+// 03:34 tylko te jebane serduszko zostalo !!!!!
+ctx.strokeStyle = "red";
+ctx.lineWidth = 2;
+ctx.beginPath();
+
+ctx.moveTo(150, 100);
+
+// lewa strona serduszka wedlug jakiegos prawa Beziera ktory mnie wychujał bo nie działa, w dupie go mam pozdro 
+ctx.quadraticCurveTo(100, 0, 50, 100);
+ctx.quadraticCurveTo(0, 200, 150, 300);
+
+// prawa strona serduszka
+ctx.quadraticCurveTo(300, 200, 250, 100);
+ctx.quadraticCurveTo(200, 0, 150, 100);
+
+ctx.stroke(); // Draw the heart outline
+//godzina 03:53 i kurwa tego serca sie nie da.. mam zbyt mala strone mam mam wyjebane nie bede tego pomniejszac teraz wszystkiego XD 
+
+
+//godzina 04:00 i tak nie zasne dzis bo nie wstanie nie ma opcji, nienawidze szkoly pozdro 
+//jebane serce nie dziala w razie co je usune xD
+//
+
+    </script>
+</body>
+
+
+</html>
