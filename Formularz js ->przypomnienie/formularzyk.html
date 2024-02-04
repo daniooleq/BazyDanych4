@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="tlo.css">
+        <title>Giga BURDEL u Danielka</title>
+    </head>
+    <body>
+        <form method="get" action="form.php">
+                <tr>
+                <td> Imię: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="bb1" id="imie"><br></td>
+                </tr>
+
+                <tr>
+                <td> Nazwisko: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="bb1" id="nazwisko"><br></td>
+                </tr>
+                    
+                <tr>
+                <td> E-mail: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="bb1" id="imie"><br></td>
+                </tr>
+
+                <tr>
+                    Usługa: <textarea></textarea><br>
+                </tr>
+
+                <tr>
+                <input type="checkbox" name="regulamin" id="reg">Zapoznałem się z regulaminem<br>
+                </tr>
+
+                <input type="reset"> 
+            
+                </form>
+
+                
+            <button onclick="Przeslij()">Prześlij</button>
+            <p id="wypisanie"></p>
+    </body>
+
+    <script>
+        function Przeslij() {
+            if((document.getElementById("reg").checked)){                       //jezeli checkbox "regulamin" jest zaznaczony
+    var imie = document.getElementById("imie").value                         //wypisz imie z dokumentu
+    var nazwisko = document.getElementById("nazwisko").value                 // wypisz nazwisko z dokumentu
+    var wynik = imie.toUpperCase() +" "+nazwisko.toUpperCase();              // zapisz imie i nazwisko w formie "WIELKICH LITER" 
+        document.getElementById("wypisanie").innerHTML = wynik;                 //wypisz wynik /I\
+            }
+            else{
+                document.getElementById("wypisanie").innerHTML = "<p style='color:red'> Zaznacz regulamin ";    //jeżeli checkbox "regulamin" nie jest zaznaczony to jebnij czerwonym kolorem ze zaznacz xd
+            }
+        }
+        </script>
+
+        
+    </html>
