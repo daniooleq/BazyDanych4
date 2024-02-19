@@ -1,0 +1,52 @@
+p::first-letter
+{
+	font-size: 130%
+}
+p {
+	color: red;
+	font-family: 'Star Jedi', sans-serif;
+
+}
+img {
+	border: blue dotted 3px;
+	box-shadow: 13px 13px 5px darkblue;
+	height: 300px;
+	width: 300px;
+	border-radius: 25px;
+}
+img:hover {
+	border: green dotted 3px;
+}
+input 
+{
+	border-radius: 25px;
+}
+#naglowek {
+    background-color: red;
+    margin: 10px;
+    font-size: 35px;
+   float: center;
+}
+#nawigacja {
+		background-color: purple;
+		font-size: 25px;
+		float: right;
+}
+		  .dziecko {
+			text-align: center;
+			border: 1px solid red;
+			padding: 1rem 1rem;
+			vertical-align: middle;
+		  }
+
+#info {
+	background-color: purple;
+	font-size: 25px;
+	float:right;
+}
+#stopka2{
+	background-color: yellow;
+	font-size: 25px;
+	float: center;
+	text-align: center;
+}		
