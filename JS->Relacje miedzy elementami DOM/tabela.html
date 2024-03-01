@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <style>
+            .{
+                height: 100px;
+                width: 100px;
+                background-color: grey;
+            }
+        </style>
+
+    <header class="baner">baner</header>
+    <main class="glowny" id="glowny">main
+        <div class="modul">
+            <div class="modul1">Lorem ipsum dolor sit amet.
+                <button class="guzik1 " id="guzior">Kliknij</button>
+                <div class="modul2">Lorem ipsum dolor ssie pale.
+                    <button class="guzik2">Kliknij</button>
+                </div>
+ 
+            </div>
+        </div>
+ koniec main  <button class="guzikmain">Kliknij</button>
+</main>
+ 
+<footer class="stopka">stopka</footer>
+</table>
+<p id="demo"></p>
+
+
+<script>
+ 
+const btn1 = document.querySelector(".guzik1")
+btn1.addEventListener("click", () => {
+const modul1 = btn1.closest(".modul1");
+modul1.style.color = '#A226Bf';
+modul1.style. backgroundColor = '#AB4831';
+modul1.style.fontsize = "50px";
+});
+
+
+var x = document.getElementById("glowny");
+x.parentNode.setAttribute('style','background-color:#abc; width: 300px; margin:10px; padding:7px;');
+ 
+   var child = document.getElementById("glowny").firstElementChild;
+   child.style.color = '#fAA2ff';
+   child.style. backgroundColor = '#8B2831';
+   document.getElementById("glowny").style.borderStyle="solid";
+ 
+
+
+   const guzior = document.getElementById("guzior");
+let odpowiedz = document.getElementById("glowny").contains(guzior);
+document.getElementById("demo").innerHTML = odpowiedz;
+if(odpowiedz=true){
+
+   var child2 = document.getElementById("glowny").lastElementChild;
+   child2.style.color = '#BBB2ff';
+   child2.style. backgroundColor = '#AAA831';
+   document.getElementById("glowny").style.borderStyle="solid";
+}
+
+
+
+
+    const btn2= document.querySelector(".guzik2")
+btn2.addEventListener("click", () => {
+const modul2 = btn2.closest(".modul2");
+modul2.style.color = '#f222ff';
+modul2.style. backgroundColor = '#924831';
+});
+const btnmain= document.querySelector(".guzikmain")
+btnmain.addEventListener("click", () => {
+const glowny = btnmain.closest(".glowny");
+glowny.style.color = '#f0768b';
+glowny.style. backgroundColor = '#2f129e';
+});
+
+
+const naglowek="baner";
+naglowek.style.backgroundColor = '#d4181d';
+
+</script>
+ 
+ 
+ 
+</body>
+</html>
